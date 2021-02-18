@@ -89,3 +89,13 @@ type Sector struct {
 type Tag struct {
 	Name string `json:"name"`
 }
+
+// InternationalExchange provides information about one international exchange including the exchange,
+// region, description, mix and exchange suffix
+type InternationalExchange struct {
+	Exchange     string `json:"exchange"`
+	Region     string `json:"region"`
+	Description     string `json:"description"`
+	Mic     string `json:"mic"`
+	ExchangeSuffix     string `json:"exchangeSuffix"`
+}

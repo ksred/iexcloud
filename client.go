@@ -1218,6 +1218,14 @@ func (c Client) USExchanges(ctx context.Context) ([]USExchange, error) {
 	return e, err
 }
 
+// InternationalExchanges returns an array of U.S. Exchanges.
+func (c Client) InternationalExchanges(ctx context.Context) ([]InternationalExchange, error) {
+	e := []InternationalExchange{}
+	endpoint := "/ref-data/exchanges"
+	err := c.GetJSON(ctx, endpoint, &e)
+	return e, err
+}
+
 // NextTradingDay returns the date of the next trading day.
 func (c Client) NextTradingDay(ctx context.Context) (TradeHolidayDate, error) {
 	r := TradeHolidayDate{}
